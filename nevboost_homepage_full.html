@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NevBoost — Precision Pipeline Framework</title>
+  <meta name="description" content="We build SaaS pipelines that don’t rely on luck or spam. The Precision Pipeline Framework helps founders book qualified meetings consistently." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .card-shadow { box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 10px 20px rgba(0,0,0,0.06); }
+    /* Simple tooltip for the Services section "i" chip */
+    .tip { position: relative; }
+    .tip:focus .tip-content,
+    .tip:hover .tip-content { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+    .tip-content {
+      position: absolute; left: 50%; bottom: calc(100% + 8px);
+      transform: translate(-50%, 6px); transition: all .15s ease;
+      opacity: 0; pointer-events: none; z-index: 40;
+      min-width: 12rem; max-width: 16rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-white text-gray-900">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-gray-900">
+        <div class="h-7 w-7 rounded-xl bg-blue-600"></div>
+        <span>NevBoost</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#process" class="hover:text-blue-600">Process</a>
+        <a href="#services" class="hover:text-blue-600">What We Do</a>
+        <a href="#framework" class="hover:text-blue-600">Framework</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#faq" class="hover:text-blue-600">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+          Book a Call
+          <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          We Build SaaS Pipelines That Don’t Rely on <span class="text-blue-600">Luck</span> or <span class="text-blue-600">Spam</span>.
+        </h1>
+        <p class="mt-4 text-gray-600 text-lg">
+          The Precision Pipeline Framework™ helps SaaS founders consistently book qualified sales meetings with the right prospects — without wasted volume or gimmicks.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+            Book Your Free Pipeline Audit
+            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+          </a>
+          <a href="#fit" class="inline-flex items-center rounded-2xl bg-emerald-500 px-6 h-11 text-sm font-semibold text-white hover:bg-emerald-600">
+            See If We’re a Fit
+            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+          </a>
+        </div>
+        <div class="mt-6 flex items-center gap-6 text-gray-500 text-sm">
+          <span class="flex items-center gap-2"><i data-lucide="shield-check" class="h-4 w-4"></i> Deliverability-safe</span>
+          <span class="flex items-center gap-2"><i data-lucide="line-chart" class="h-4 w-4"></i> ACV/CAC-aware</span>
+          <span class="flex items-center gap-2"><i data-lucide="users" class="h-4 w-4"></i> ICP-aligned</span>
+        </div>
+      </div>
+
+      <!-- Visual / Mock video frame -->
+      <div class="relative">
+        <div class="aspect-video w-full rounded-2xl border border-gray-200 card-shadow overflow-hidden bg-gray-50">
+          <div class="h-full w-full flex items-center justify-center">
+            <div class="text-center">
+              <div class="mx-auto mb-4 h-14 w-14 rounded-full bg-blue-100 flex items-center justify-center">
+                <i data-lucide="zap" class="h-7 w-7 text-blue-600"></i>
+              </div>
+              <p class="font-semibold">3‑Minute Framework Overview</p>
+              <p class="text-gray-500 text-sm">Drop your video embed here (Vimeo/YouTube)</p>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-4 -left-4 bg-white rounded-xl border border-gray-200 px-4 py-2 card-shadow hidden md:block">
+          <div class="text-xs text-gray-500">Trusted by</div>
+          <div class="mt-1 flex items-center gap-4 opacity-80">
+            <div class="h-6 w-16 bg-gray-200 rounded"></div>
+            <div class="h-6 w-16 bg-gray-200 rounded"></div>
+            <div class="h-6 w-16 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold">Cold email shouldn’t feel like risking <span class="text-blue-600">burning time & money</span>.</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-6 text-left">
+        <div class="p-0 flex items-start gap-3">
+          <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 mt-0.5"></i>
+          <p class="text-gray-600">Other agencies chase volume → spammy templates, bad leads, zero traction.</p>
+        </div>
+        <div class="p-0 flex items-start gap-3">
+          <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 mt-0.5"></i>
+          <p class="text-gray-600">You end up with wasted domains, frustrated reps, and no pipeline clarity.</p>
+        </div>
+        <div class="p-0 flex items-start gap-3">
+          <i data-lucide="check-circle-2" class="h-5 w-5 text-emerald-500 mt-0.5"></i>
+          <p class="text-gray-600">We’ve been on the other side of it — so we built a better way.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Table -->
+  <section class="py-16 md:py-24 bg-white" id="fit">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">Not Just Another "Spray & Pray" Agency</h2>
+      <div class="mt-8 overflow-hidden rounded-2xl border border-gray-200">
+        <table class="w-full text-sm md:text-base">
+          <thead>
+            <tr class="bg-blue-600 text-white">
+              <th class="p-4 text-left">Other Agencies</th>
+              <th class="p-4 text-left">NevBoost</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="p-4">One-size-fits-all templates</td>
+              <td class="p-4 font-medium text-gray-900">ICP-aligned, research-based messaging</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="p-4">Shallow offers (free trials/discounts)</td>
+              <td class="p-4 font-medium text-gray-900">SaaS-specific offer engineering</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="p-4">Vanity metrics: opens & clicks</td>
+              <td class="p-4 font-medium text-gray-900">Pipeline contribution (ACV/CAC focus)</td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50">
+              <td class="p-4">Short‑term spikes</td>
+              <td class="p-4 font-medium text-gray-900">Playbook for repeatable growth</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-6 flex justify-center">
+        <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+          See If We’re a Fit
+          <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 md:py-24 bg-gray-50" id="process">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Here’s How We Build Your Pipeline — Step by Step</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <i data-lucide="sparkles" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Pilot</h3>
+          <p class="pt-0 text-gray-600 text-sm">Quick‑win campaign to test your ICP & offer.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <i data-lucide="line-chart" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Playbook</h3>
+          <p class="pt-0 text-gray-600 text-sm">Documented outbound system designed for repeatability.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <i data-lucide="users" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Scale</h3>
+          <p class="pt-0 text-gray-600 text-sm">Turn into a consistent flow of qualified meetings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 md:py-24 bg-white" id="services">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Everything You Need for Outbound Success — Done With You</h2>
+      <p class="mt-3 text-center text-gray-500 max-w-3xl mx-auto">Fast to scan on mobile, with extra detail on hover for desktop. Short captions are always visible; tooltips add clarity without clutter.</p>
+      <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="users" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">ICP Research &amp; Data Enrichment</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">We segment accounts by pains, triggers, and buying roles; enrich with LinkedIn + firmographic data for precision outreach.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Define who actually buys &amp; why.</p>
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="sparkles" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">Offer Engineering</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">We craft SaaS-specific value props + risk reversals aligned to ACV/CAC targets and sales cycle length.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Design offers that convert.</p>
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">Multi‑Step Campaign Buildout</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">Sequenced touchpoints with conditional logic, reply handling, and calendar-forward CTAs.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Email + LinkedIn + reply maps.</p>
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="shield-check" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">Deliverability &amp; Domain Setup</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">Warmups, DMARC/DKIM/SPF, pools, throttling, and bounce control to keep you landing in inboxes.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Protect sender reputation.</p>
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="pen-line" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">Conversion‑Focused Copywriting</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">Plain‑text, prospect‑centric copy with problem‑proof‑promise structure and tight personalization rules.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Message‑market fit in the inbox.</p>
+            </div>
+          </div>
+        </div>
+        <!-- item -->
+        <div class="rounded-2xl h-full border border-gray-200 p-6">
+          <div class="flex items-start gap-3">
+            <div class="h-10 w-10 shrink-0 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+              <i data-lucide="line-chart" class="h-5 w-5"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-base leading-snug">
+                <span class="inline-flex items-baseline gap-1 min-w-0">
+                  <span class="break-words font-semibold">Pipeline Reporting &amp; Insights</span>
+                  <button class="tip inline-flex h-4 w-4 shrink-0 whitespace-nowrap rounded-full bg-gray-100 text-gray-500 items-center justify-center text-[10px] cursor-help select-none" aria-label="More info" tabindex="0">i
+                    <span class="tip-content bg-gray-900 text-white text-xs px-3 py-2 rounded-lg shadow-lg">We track pipeline contribution, meeting quality, and offer/ICP splits to double down on what works.</span>
+                  </button>
+                </span>
+              </div>
+              <p class="mt-1 text-sm text-gray-500">Decisions by data, not vibes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 flex justify-center">
+        <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+          Book Your Audit Call
+          <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PPF (Framework) -->
+  <section class="py-16 md:py-24 bg-gray-50" id="framework">
+    <div class="mx-auto max-w-6xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">The Precision Pipeline Framework (PPF)</h2>
+      <p class="mt-3 text-center text-gray-500 max-w-3xl mx-auto">
+        Consistent outbound = the <strong>right offer</strong> to the <strong>right person</strong> in the <strong>right situation</strong>.
+        When any one is off, replies drop and meetings stall.
+      </p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <i data-lucide="sparkles" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Right Offer</h3>
+          <ul class="list-disc ml-5 space-y-2 text-sm text-gray-600 mt-2">
+            <li>Value prop tied to a measurable outcome (ACV/CAC aware).</li>
+            <li>Risk reversal (pilot, proof, or light‑lift next step).</li>
+            <li>Specific to the prospect’s context (not a generic demo).</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="users" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Right Person</h3>
+          <ul class="list-disc ml-5 space-y-2 text-sm text-gray-600 mt-2">
+            <li>Clear ICP by role, seniority, and buying committee.</li>
+            <li>Signals &amp; triggers (hiring, tech stack, funding, intent).</li>
+            <li>Personalization rules that scale beyond first name.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center">
+            <i data-lucide="calendar-days" class="h-5 w-5"></i>
+          </div>
+          <h3 class="mt-3 font-semibold">Right Situation</h3>
+          <ul class="list-disc ml-5 space-y-2 text-sm text-gray-600 mt-2">
+            <li>Timing &amp; relevance (quarter, initiatives, current tools).</li>
+            <li>Channel mix (email + LinkedIn) with reply mappings.</li>
+            <li>Deliverability‑safe sending to protect domain reputation.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-500">PPF is how we engineer replies into meetings — without gimmicks or spam.</p>
+        <div class="mt-4 flex justify-center">
+          <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+            Map Your PPF
+            <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 md:py-24 bg-white" id="about">
+    <div class="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 grid md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-2">
+        <div class="aspect-square w-full rounded-2xl bg-gray-100 border border-gray-200"></div>
+      </div>
+      <div class="md:col-span-3">
+        <h2 class="text-2xl md:text-3xl font-bold">Who’s Behind NevBoost?</h2>
+        <p class="mt-4 text-gray-600">
+          I’m Eli Yonas, founder of NevBoost. After years studying SaaS sales, I realized most agencies were missing the big picture — it’s not about templates or tools, it’s about the
+          <strong> right offer, right person, right situation</strong>. NevBoost exists to give SaaS teams a repeatable, economics‑driven outbound system.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#contact" class="inline-flex items-center rounded-2xl bg-emerald-500 px-6 h-11 text-sm font-semibold text-white hover:bg-emerald-600">Meet Eli</a>
+          <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-gray-50" id="faq">
+    <div class="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">Still Wondering If This Will Work for You?</h2>
+      <div class="mt-8 space-y-3">
+        <details class="group rounded-xl border border-gray-200 bg-white p-4 open:shadow-md">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+            <span>What if my SaaS is early‑stage?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="mt-2 text-gray-600">The framework adapts to your stage — pilot programs are perfect for testing.</div>
+        </details>
+        <details class="group rounded-xl border border-gray-200 bg-white p-4 open:shadow-md">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+            <span>How soon can I see results?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="mt-2 text-gray-600">Most SaaS clients see clarity + first calls within 30–45 days.</div>
+        </details>
+        <details class="group rounded-xl border border-gray-200 bg-white p-4 open:shadow-md">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-medium">
+            <span>Do you guarantee results?</span>
+            <i data-lucide="chevron-down" class="h-5 w-5 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="mt-2 text-gray-600">No one can guarantee meetings — but we guarantee a tested system + clear data to scale.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 md:py-24 bg-gray-900 text-white">
+    <div class="mx-auto max-w-5xl px-4 md:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold">Ready to Build a Pipeline That Works While You Sleep?</h2>
+      <p class="mt-3 text-gray-300">Let’s audit your outbound and map a Precision Pipeline plan.</p>
+      <div class="mt-6 flex justify-center">
+        <a href="#book" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+          Book Your Free Pipeline Audit
+          <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book / Contact -->
+  <section class="py-16 md:py-24 bg-white" id="book">
+    <div class="mx-auto max-w-4xl px-4 md:px-6 lg:px-8">
+      <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+        <h3 class="text-xl font-semibold">Book Your Free Pipeline Audit</h3>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium">Full Name</label>
+              <input class="mt-1 w-full rounded-xl border border-gray-300 px-3 h-10 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Jane Doe">
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Work Email</label>
+              <input type="email" class="mt-1 w-full rounded-xl border border-gray-300 px-3 h-10 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="jane@company.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium">Company</label>
+              <input class="mt-1 w-full rounded-xl border border-gray-300 px-3 h-10 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Acme SaaS">
+            </div>
+            <div>
+              <label class="block text-sm font-medium">What’s your biggest outbound challenge?</label>
+              <textarea class="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2 h-24 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="e.g., low reply rates, unclear ICP, deliverability, offer"></textarea>
+            </div>
+            <button type="button" class="inline-flex items-center rounded-2xl bg-blue-600 px-6 h-11 text-sm font-semibold text-white hover:bg-blue-700">
+              Request Audit
+              <i data-lucide="arrow-right" class="ml-2 h-4 w-4"></i>
+            </button>
+          </form>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-gray-600"><i data-lucide="calendar-days" class="h-5 w-5 text-blue-600"></i> Get a 20–40 min call — zero hard selling.</div>
+            <div class="flex items-center gap-3 text-gray-600"><i data-lucide="line-chart" class="h-5 w-5 text-blue-600"></i> Clear data on ICP &amp; offer viability.</div>
+            <div class="flex items-center gap-3 text-gray-600"><i data-lucide="shield-check" class="h-5 w-5 text-blue-600"></i> Deliverability‑safe setup recommendations.</div>
+            <div class="flex items-center gap-3 text-gray-600"><i data-lucide="phone" class="h-5 w-5 text-blue-600"></i> Prefer Calendly? Embed it here.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2 text-white font-bold">
+          <div class="h-7 w-7 rounded-xl bg-blue-600"></div>
+          <span>NevBoost</span>
+        </div>
+        <p class="mt-3 text-sm text-gray-400">Precision Pipeline Framework™ for consistent SaaS meetings.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 text-sm">
+        <div>
+          <div class="text-white font-semibold mb-3">Company</div>
+          <ul class="space-y-2">
+            <li><a href="#process" class="hover:text-white">Process</a></li>
+            <li><a href="#services" class="hover:text-white">Services</a></li>
+            <li><a href="#framework" class="hover:text-white">Framework</a></li>
+            <li><a href="#about" class="hover:text-white">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-white font-semibold mb-3">Contact</div>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="mail" class="h-4 w-4"></i> hello@nevboost.com</li>
+            <li class="flex items-center gap-2"><i data-lucide="phone" class="h-4 w-4"></i> (555) 123‑4567</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-sm text-gray-400">© <span id="year"></span> NevBoost. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    // Initialize icons and current year
+    lucide.createIcons();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
